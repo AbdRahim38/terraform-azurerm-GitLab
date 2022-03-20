@@ -149,6 +149,9 @@ resource "azurerm_virtual_machine" "main" {
   # Uncomment this line to delete the data disks automatically when deleting the VM
   delete_data_disks_on_termination = true
 
+  # Use https://vincentlauzon.com/2018/01/10/finding-a-vm-image-reference-publisher-sku/ 
+  # to find the image reference in the future. 
+  # Alternatively, use `az vm image list --offer gitlabee --all`
   plan {
     name      = "default"
     publisher = "gitlabinc1586447921813"
